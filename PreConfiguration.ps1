@@ -17,3 +17,16 @@
 }
 
 Copy-WithCreateDirectory -sourcePath "\\hqazrndfs01.corp.aspentech.com\upload$\aspenONEV14.0\ProMV\RC" -destinationPath "C:\p4\Media\"
+
+
+Start-Process -FilePath 'C:\Program Files\AspenTech\InfoPlus.21\db21\code\IP21Rename.exe' -ArgumentList "-nq" -WorkingDirectory 'C:\Program Files\AspenTech\InfoPlus.21\db21\code\' -Wait
+
+& "C:\Program Files\AspenTech\InfoPlus.21\db21\code\tsk_client.exe" /start_infoplus21
+
+C:\ProgramData\Aspentech\AspenVirtualPlant\runscript.vbs
+
+iisreset
+
+iisreset
+
+C:\ProgramData\Aspentech\AspenVirtualPlant\startVP.bat
