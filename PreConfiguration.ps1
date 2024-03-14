@@ -7,9 +7,9 @@ Write-Host "info plus starting"
 & "C:\Program Files\AspenTech\InfoPlus.21\db21\code\tsk_client.exe" /start_infoplus21 >> C:\p4\ProMVConfiguration.git\logs\logStartInfoPlus.txt
 
 
-Write-Host "Virtual Plant starting"
+#Write-Host "Virtual Plant starting"
 
-C:\ProgramData\Aspentech\AspenVirtualPlant\runscript.vbs >> C:\p4\ProMVConfiguration.git\logs\logVirtualPlant.txt
+#C:\ProgramData\Aspentech\AspenVirtualPlant\runscript.vbs >> C:\p4\ProMVConfiguration.git\logs\logVirtualPlant.txt
 
 
 
