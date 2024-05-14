@@ -26,4 +26,4 @@ iisreset >> C:\p4\ProMVConfiguration.git\logs\logIssReset.txt
 
 
 Write-Host "Update Node JS"
-choco install nodejs >> C:\p4\ProMVConfiguration.git\logs\installNodeJS.txt
+choco install nodejs -y >> C:\p4\ProMVConfiguration.git\logs\installNodeJS.txt
