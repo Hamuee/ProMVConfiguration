@@ -25,5 +25,30 @@ iisreset >> C:\p4\ProMVConfiguration.git\logs\logIssReset.txt
 iisreset >> C:\p4\ProMVConfiguration.git\logs\logIssReset.txt
 
 
+Write-Host "Chocolatey"
+# Check if Chocolatey is installed
+if (!(Get-Command choco -ErrorAction SilentlyContinue)) {
+    Write-Output "Chocolatey is not installed. Proceeding with installation..."
+
+    # Set the execution policy to allow running scripts
+    Set-ExecutionPolicy Bypass -Scope Process -Force;
+
+    # Install Chocolatey
+    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072;
+    iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'));
+
+    Write-Output "Chocolatey has been installed successfully."
+} else {
+    Write-Output "Chocolatey is already installed."
+}
+
+# Check the version of Chocolatey
+choco --version
+
+
+
+
+
+
 Write-Host "Update Node JS"
 choco install nodejs --version=18.18.2 --force -y >> C:\p4\ProMVConfiguration.git\logs\installNodeJS.txt
